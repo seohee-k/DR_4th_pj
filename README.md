@@ -11,6 +11,7 @@
 
 
 
+<br />
 
 
 ## 제작 기간 & 참여 인원
@@ -20,7 +21,7 @@
 
 
 
-
+<br />
 
 
 ## 사용한 기술 (기술 스택)  
@@ -29,14 +30,14 @@
 <img src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=white">   <img src="https://img.shields.io/badge/ROS2-black?style=for-the-badge&logo=ros&logoColor=#22314E">   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">   <img src="https://img.shields.io/badge/YOLO-111F68?style=for-the-badge&logo=yolo&logoColor=white">  <img src="https://img.shields.io/badge/STT-red?style=for-the-badge&logo=STT&logoColor=white">  <img src="https://img.shields.io/badge/LLM-green?style=for-the-badge&logo=LLM&logoColor=white">  <img src="https://img.shields.io/badge/DoosanAPI-blue?style=for-the-badge&logo=DoosanAPI&logoColor=white">
 
 
-
+<br />
 
 
 ## High Level Architecture Diagram
 
 <img width="1172" height="246" alt="image" src="https://github.com/user-attachments/assets/6952ab3d-2b85-4827-b818-4b2eca24732a" />
 
-
+<br />
 
 ## 내가 기여한 부분
 
@@ -59,7 +60,7 @@
 
 
 
-
+<br />
 
 
    
@@ -72,7 +73,7 @@
 2. custom dataset과 coco dataset을 합치니 coco dataset에 포함되어있는 다른 객체들도 인식함
 
 
-
+<br />
 
 ## 🔨해결방법
 
@@ -83,7 +84,7 @@
 2-1. ROI를 통해 일정 영역 안에 있는 객체만 인식하게 변경하고싶었지만 시간 부족으로 custom data만 사용하는 방법을 채택했다.
 
 
-
+<br />
 
 
 ## 회고 / 느낀 점
