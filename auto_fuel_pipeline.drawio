@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net"><diagram name="AutoFuelPipeline">&lt;![CDATA[&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;mxGraphModel dx="1134" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1"
+              fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0"&gt;
+  &lt;root&gt;
+    &lt;mxCell id="0"/&gt;
+    &lt;mxCell id="1" parent="0"/&gt;
+
+    &lt;!-- 사용자 입력 --&gt;
+    &lt;mxCell id="user" value="🎤 사용자
+(음성 명령 입력)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"&gt;
+      &lt;mxGeometry x="20" y="60" width="160" height="60" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;!-- ToolPublisherNode --&gt;
+    &lt;mxCell id="tool_node" value="🟦 ToolPublisherNode
+(STT + GPT-4o 분석)
+→ /oil, /target, /detected_tool" style="rounded=1;fillColor=#dae8fc;whiteSpace=wrap;html=1;" vertex="1" parent="1"&gt;
+      &lt;mxGeometry x="220" y="40" width="220" height="80" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;!-- YOLOPublisherNode --&gt;
+    &lt;mxCell id="yolo_node" value="🟩 YoloPublisherNode
+YOLO 추론
+구독: /detected_tool
+→ /yolo_result" style="rounded=1;fillColor=#d5e8d4;whiteSpace=wrap;html=1;" vertex="1" parent="1"&gt;
+      &lt;mxGeometry x="500" y="40" width="220" height="80" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;!-- AutoFuelControlNode --&gt;
+    &lt;mxCell id="fuel_node" value="🟥 AutoFuelControlNode
+구독: /yolo_result
+→ /get_3d_position 호출
+→ 로봇 제어" style="rounded=1;fillColor=#f8cecc;whiteSpace=wrap;html=1;" vertex="1" parent="1"&gt;
+      &lt;mxGeometry x="780" y="40" width="240" height="100" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;!-- 화살표 연결 --&gt;
+    &lt;mxCell id="edge1" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="user" target="tool_node"&gt;
+      &lt;mxGeometry relative="1" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id="edge2" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="tool_node" target="yolo_node"&gt;
+      &lt;mxGeometry relative="1" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id="edge3" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="yolo_node" target="fuel_node"&gt;
+      &lt;mxGeometry relative="1" as="geometry"/&gt;
+    &lt;/mxCell&gt;
+  &lt;/root&gt;
+&lt;/mxGraphModel&gt;
+]]&gt;</diagram></mxfile>
